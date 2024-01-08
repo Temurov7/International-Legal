@@ -1,0 +1,127 @@
+.hero-section{
+    margin-bottom: 187px;
+}
+.hero-top{
+    position: relative;
+}
+.hero__content{
+    position: relative;
+    width: 733px;
+    z-index: 2;
+}
+.hero__title{
+    @include textStyle($color:#262626,$fontSize:48px,$fontWeight:700,$lineHeight:55px);
+    margin-bottom: 16px;
+}
+.herodoc{
+    @include textStyle($color:#262626,$fontSize:14px,$fontWeight:400,$lineHeight:150%);
+}
+.hero__text-wrapper{
+    width: 547px;
+    margin-bottom: 32px;
+}
+.hero__link{
+    transition: opacity 0.4s linear;
+    display: inline-block;
+    @include button($width:268px);
+
+    &:hover{
+        opacity: 0.8;
+    }
+
+}
+.hero-img{
+    position: absolute;
+    top: -165px;
+    right: 70px;
+}
+
+.hero__service{
+    width: 712px;
+    padding: 32px 48px;
+    position: relative;
+    margin-left: auto;
+    z-index: 2;
+    border-radius: 10px;
+    background: #F4F7FA;
+    box-shadow: 0px 4px 100px 0px rgba(208, 218, 227, 0.57);
+    @include display();
+
+}
+.hero__service-wrap{
+    margin-top: 8px;
+    width: 149px;
+}
+.hero__service-text{
+    @include textStyle($color:#303030,$fontSize:16px,$lineHeight:26px,$fontWeight:400)
+}
+.hero__service-item:nth-child(2) > .hero__service-wrap{
+    width: 224px;
+}
+.hero__service-item:nth-child(3) > .hero__service-wrap{
+    width: 179px;
+}
+
+@media (max-width:845px){
+    .hero-top{
+        padding-bottom: 154px;
+        background-image: url("../images/hero-mobile-bg.svg");
+        background-repeat: no-repeat;
+        background-size: 100% auto;
+    }
+    .hero-img{
+      display: none;
+    }
+    .hero__content{
+        width: 100%;
+        text-align: center;
+    }
+    .hero__text-wrapper{
+        width: 100%;
+    }
+    .hero__service{
+        width: 100%;
+        margin: 0 auto;
+    }
+    .hero__service{
+        @include display($direction:column);
+        gap: 24px;
+        text-align: center;
+    }
+    .hero__service-item, .hero__service-wrap{
+        margin-top: 16px;
+        width: 100%;
+    }
+    .hero__service-item:nth-child(2) > .hero__service-wrap{
+        width: 100%;
+    }
+    .hero__service-item:nth-child(3) > .hero__service-wrap{
+        width: 100%;
+    }
+}
+
+@media (max-width:500px){
+    .hero-top{
+       background-position-y:40px;
+       padding-bottom: 200px;
+    }
+    .hero__title{
+    @include textStyle($color:#262626,$fontSize:24px,$fontWeight:700,$lineHeight:30px);
+    }
+    .herodoc{
+        @include textStyle($color:#262626,$fontSize:12px,$fontWeight:400,$lineHeight:150%);
+    }
+    .hero__text-wrapper{
+        margin-bottom: 16px;
+    }
+    .hero__service{
+        padding:32px 5px;
+    }
+}
+
+@media (max-width:435px){
+    .header__top{
+       background-position-y:20px;
+       padding-bottom: 200px;
+    }
+}
